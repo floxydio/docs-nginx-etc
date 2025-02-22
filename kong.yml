@@ -1,0 +1,20 @@
+_format_version: "2.1"
+
+services:
+  - name: user-service
+    url: http://your_ip:3800/ # diganti ipv4 masing-masing yaaa :)
+    routes:
+      - name: user-route
+        strip_path: false
+        paths: # --> setiap nambah endpoint,jangan lupa di add dimari
+          - /v1/users
+          - /v1/create-users
+
+  - name: todo-service
+    url: http://your_ip:3500/ # diganti ipv4 masing-masing yaaa :)
+    routes:
+      - name: todo-route
+        strip_path: false
+        paths:
+          - /v1/todo
+          - /v1/create-todo
